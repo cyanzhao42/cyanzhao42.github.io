@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0034)https://jonbarron.info/mipnerf360/ -->
+<!-- saved from url=(0034)https://cyanzhao42.github.io/LearnInverseProblem/ -->
 <html>
 
 <head lang="en">
@@ -12,21 +12,39 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:image" content="https://jonbarron.info/mipnerf360/img/gardenvase.jpg">
+    <meta property="og:image" content="https://cyanzhao42.github.io/LearnInverseProblem/teaser_cr.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1296">
     <meta property="og:image:height" content="840">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jonbarron.info/mipnerf360/">
+    <meta property="og:url" content="https://cyanzhao42.github.io/LearnInverseProblem/">
     <meta property="og:title" content="Learning to Solve PDE-constrained Inverse Problems with Graph Networks">
-    <meta property="og:description"
-        content="Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on &#39;unbounded&#39; scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub &#39;mip-NeRF 360&#39; as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes.">
+    <meta property="og:description" content="Learned graph neural networks (GNNs) have recently been established as fast and accurate
+        alternatives for principled solvers in simulating the dynamics of physical systems. In many
+        application domains across science and engineering, however, we are not only interested in a forward
+        simulation but also in solving inverse problems with constraints defined by a partial differential
+        equation (PDE). Here we explore GNNs to solve such PDE-constrained inverse problems. Given a sparse
+        set of measurements, we are interested in recovering the initial condition or parameters of the
+        PDE. We demonstrate that GNNs combined with autodecoder-style priors are well-suited for these
+        tasks, achieving more accurate estimates of initial conditions or physical parameters than other
+        learned
+        approaches when applied to the wave equation or Navier-Stokes equations. We also demonstrate
+        computational speedups of up to 90x using GNNs compared to principled solvers.">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Learning to Solve PDE-constrained Inverse Problems with Graph Networks">
-    <meta name="twitter:description"
-        content="Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on &#39;unbounded&#39; scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub &#39;mip-NeRF 360&#39; as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes.">
-    <meta name="twitter:image" content="https://jonbarron.info/mipnerf360/img/gardenvase.jpg">
+    <meta name="twitter:description" content="Learned graph neural networks (GNNs) have recently been established as fast and accurate
+        alternatives for principled solvers in simulating the dynamics of physical systems. In many
+        application domains across science and engineering, however, we are not only interested in a forward
+        simulation but also in solving inverse problems with constraints defined by a partial differential
+        equation (PDE). Here we explore GNNs to solve such PDE-constrained inverse problems. Given a sparse
+        set of measurements, we are interested in recovering the initial condition or parameters of the
+        PDE. We demonstrate that GNNs combined with autodecoder-style priors are well-suited for these
+        tasks, achieving more accurate estimates of initial conditions or physical parameters than other
+        learned
+        approaches when applied to the wave equation or Navier-Stokes equations. We also demonstrate
+        computational speedups of up to 90x using GNNs compared to principled solvers.">
+    <meta name="twitter:image" content="https://cyanzhao42.github.io/LearnInverseProblem/pipline2.jpg">
 
 
     <!-- <link rel="icon"
