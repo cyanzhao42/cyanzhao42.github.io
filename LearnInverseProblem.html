@@ -269,7 +269,7 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                Learning to Solve PDE-constrained Inverse <br> Problems with Graph Networks<br>
+                Learning to Solve PDE-constrained Inverse Problems <br> with Graph Networks<br>
                 <small>
                     ICML 2022
                 </small>
@@ -299,31 +299,47 @@
                 </ul>
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
-                    <source src="img/gardenvase_720.mp4" type="video/mp4">
-                </video>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="./LearnInverseProblem/pre-print.pdf">
+                            <img src="./LearnInverseProblem/paper_image.png" height="45px">
+                            <h4>Paper</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./LearnInverseProblem/poster.pdf">
+                            <img src="./LearnInverseProblem/poster_icon.png" height="45px" width="40px">
+                            <h4>Poster</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tobefilled">
+                            <img src="./LearnInverseProblem/slides.svg" height="45px">
+                            <h4>Slides</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tobefilled">
+                            <img src="./LearnInverseProblem/youtube_icon.png" height="45px">
+                            <h4>Video</h4>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                            <a href="TODO">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li> -->
+                </ul>
             </div>
-            <div class="col-md-8 col-md-offset-2">
-                <p class="text-center">
-                    Rendered images and depths from our model.
-                </p>
-            </div>
-        </div> -->
-        <div class="row" id="header_img">
-            <figure class="col-md-8 col-md-offset-2">
-                <img src="./LearnInverseProblem/pipline2.jpg" class="img-responsive" alt="overview">
-                <figcaption>
-                    <!-- Pipeline: we first pre-train the prior and a Graph Neural Network (GNN) for
-                    a given class of problems in a supervised manner using a dataset generated from classical FEM
-                    solvers. At test time, the prior
-                    maps the latent code to the estimated physics parameter that is passed to the GNN to obtained the
-                    predicted dynamics. The latent code is then optimized to minimize the difference between predicted
-                    and observed dynamics on the graph. -->
-                </figcaption>
-            </figure>
         </div>
+
+
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -361,48 +377,25 @@
 
 
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <figure class="col-md-8 col-md-offset-2">
                 <h3>
-                    <!-- <h3 class="text&#45;center"> -->
-                    Downloads
+                    Overview
                 </h3>
-                <div class="col-md-0 col-md-offset-0 text-center">
-                    <ul class="nav nav-pills nav-justified">
-                        <li>
-                            <a href="tobefilled">
-                                <img src="./LearnInverseProblem/paper_image.png" height="30px">
-                                <h4>Paper</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./LearnInverseProblem/poster.pdf">
-                                <img src="./LearnInverseProblem/poster_icon.png" height="30px">
-                                <h4>Poster</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tobefilled">
-                                <img src="./LearnInverseProblem/slides.svg" height="30px">
-                                <h4>Slides (coming soon)</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tobefilled">
-                                <img src="./LearnInverseProblem/youtube_icon.png" height="30px">
-                                <h4>Video (coming soon)</h4>
-                            </a>
-                        </li>
-
-                        <!-- <li>
-                            <a href="TODO">
-                            <image src="img/github.png" height="60px">
-                                <h4><strong>Code</strong></h4>
-                            </a>
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
+                <img src="./LearnInverseProblem/pipline2.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Pipeline for solving inverse problems (illustrated for the 2D wave equation). The forward simulator
+                    GNN (the blue boxes) and
+                    the prior networks (green boxes) are pre-trained with a dataset of wave trajectories generated using
+                    classical FEM solvers. We aim to
+                    recover the initial wavefield or the velocity distribution. At test time, the generative model first
+                    maps a latent code to the estimated physics
+                    parameters (step 1) that is passed to the GNN to obtain the predicted dynamics (step 2). The latent
+                    code is optimized to minimize the
+                    difference between the predicted and the observed dynamics on the graph (steps 3 and 4).
+                </p>
+            </figure>
         </div>
+
 
 
 
