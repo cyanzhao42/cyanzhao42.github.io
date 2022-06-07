@@ -301,7 +301,76 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:0%;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ov0jxa4xHGU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Learned graph neural networks (GNNs) have recently been established as fast and accurate
+                    alternatives for principled solvers in simulating the dynamics of physical systems. In many
+                    application domains across science and engineering, however, we are not only interested in a forward
+                    simulation but also in solving inverse problems with constraints defined by a partial differential
+                    equation (PDE). Here we explore GNNs to solve such PDE-constrained inverse problems. Given a sparse
+                    set of measurements, we are interested in recovering the initial condition or parameters of the
+                    PDE. We demonstrate that GNNs combined with autodecoder-style priors are well-suited for these
+                    tasks, achieving more accurate estimates of initial conditions or physical parameters than other
+                    learned
+                    approaches when applied to the wave equation or Navier-Stokes equations. We also demonstrate
+                    computational speedups of up to 90x using GNNs compared to principled solvers.
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <figure class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <img src="./LearnInverseProblem/pipline2.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Pipeline for solving inverse problems (illustrated for the 2D wave equation). The forward simulator
+                    GNN (the blue boxes) and
+                    the prior networks (green boxes) are pre-trained with a dataset of wave trajectories generated using
+                    classical FEM solvers. We aim to
+                    recover the initial wavefield or the velocity distribution. At test time, the generative model first
+                    maps a latent code to the estimated physics
+                    parameters (step 1) that is passed to the GNN to obtain the predicted dynamics (step 2). The latent
+                    code is optimized to minimize the
+                    difference between the predicted and the observed dynamics on the graph (steps 3 and 4).
+                </p>
+            </figure>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Download
+                </h3>
                 <ul class="nav nav-pills nav-justified">
                     <li>
                         <a href="https://arxiv.org/abs/2206.00711">
@@ -337,68 +406,6 @@
                 </ul>
             </div>
         </div>
-
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Abstract
-                </h3>
-                <p class="text-justify">
-                    Learned graph neural networks (GNNs) have recently been established as fast and accurate
-                    alternatives for principled solvers in simulating the dynamics of physical systems. In many
-                    application domains across science and engineering, however, we are not only interested in a forward
-                    simulation but also in solving inverse problems with constraints defined by a partial differential
-                    equation (PDE). Here we explore GNNs to solve such PDE-constrained inverse problems. Given a sparse
-                    set of measurements, we are interested in recovering the initial condition or parameters of the
-                    PDE. We demonstrate that GNNs combined with autodecoder-style priors are well-suited for these
-                    tasks, achieving more accurate estimates of initial conditions or physical parameters than other
-                    learned
-                    approaches when applied to the wave equation or Navier-Stokes equations. We also demonstrate
-                    computational speedups of up to 90x using GNNs compared to principled solvers.
-                </p>
-            </div>
-        </div>
-
-        <!-- <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Video
-                </h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="./LearnInverseProblem/zBSH-k9GbV4.html" allowfullscreen=""
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-        <div class="row">
-            <figure class="col-md-8 col-md-offset-2">
-                <h3>
-                    Overview
-                </h3>
-                <img src="./LearnInverseProblem/pipline2.jpg" class="img-responsive" alt="overview"><br>
-                <p class="text-justify">
-                    Pipeline for solving inverse problems (illustrated for the 2D wave equation). The forward simulator
-                    GNN (the blue boxes) and
-                    the prior networks (green boxes) are pre-trained with a dataset of wave trajectories generated using
-                    classical FEM solvers. We aim to
-                    recover the initial wavefield or the velocity distribution. At test time, the generative model first
-                    maps a latent code to the estimated physics
-                    parameters (step 1) that is passed to the GNN to obtain the predicted dynamics (step 2). The latent
-                    code is optimized to minimize the
-                    difference between the predicted and the observed dynamics on the graph (steps 3 and 4).
-                </p>
-            </figure>
-        </div>
-
-
-
-
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -436,11 +443,11 @@
                                             </div>
                                             <div class="CodeMirror-code" style="">
                                                 <pre
-                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">@article{qzhaoInverseProblemGNN,</span></pre>
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">@inproceedings{qzhao2022graphpde,</span></pre>
                                                 <pre
                                                     class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  title={Learning to Solve PDE-constrained Inverse Problems with Graph Networks},</span></pre>
                                                 <pre
-                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  author={Qingqing Zhao, David B. Lindell, and Gordon Wetzstein}</span></pre>
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  author={Qingqing Zhao and David B. Lindell and Gordon Wetzstein}</span></pre>
                                                 <pre
                                                     class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  journal={ICML},</span></pre>
                                                 <pre
