@@ -193,19 +193,19 @@ span.highlight {
     margin-right: 25px; 
     margin-bottom: 25px; }
     
-    .video { width: 100%; height: auto; position: relative; top: 0; left: 0; }
+  .video { width: 100%; height: auto; position: relative; top: 0; left: 0; }
 
-    .grid-container-5 { 
-      display: grid; 
-      grid-template-columns: repeat(5, 1fr); 
-      grid-gap: 10px; 
-      margin-left: 25px; 
-      margin-right: 25px; 
-      margin-bottom: 25px; }
+  .grid-container-5 { 
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-gap: 10px; 
+    margin-left: 25px; 
+    margin-right: 25px; 
+    margin-bottom: 25px; }
 
-      .overview_center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-      }
+    .overview_center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
