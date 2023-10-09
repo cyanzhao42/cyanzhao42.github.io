@@ -298,19 +298,16 @@
                     Video
                 </h3>
                 <div class="text-center">
-                    <img src="./pose2motion/teaser.png" class="img-responsive" alt="overview"><br>
-                    <!-- <div style="position:relative;padding-top:0%;">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ov0jxa4xHGU"
+                    <div style="position:relative;padding-top:0%;">
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ov0jxa4xHGU"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div> -->
+                            allowfullscreen></iframe> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WTJgUwh7BXc?si=argR_pYNTZh06chv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-
 
 
         <div class="row">
@@ -332,7 +329,7 @@
                 <h3>
                     Overview
                 </h3>
-                <img src="./pose2motion/overview.png" class="img-responsive" alt="overview"><br>
+                <img src="./pose2motion/overview.png" width=80% class="overview_center" alt="overview"><br>
                 <p class="text-justify">
                     Our method builds on an asymmetric CycleGAN. The first half of the cycle maps a motion sequence from the source domain to a sequence of poses and root transformations in the target domain; the individual poses are compared against the pose dataset of the target domain using a pose discriminator. The other half of the cycle maps the sequence of poses and root transformations back to a motion sequence in the source domain, which is supervised with a reconstruction loss and an adversarial loss using a motion discriminator. The contact and end-effector consistency implicitly regulates the root prediction, leading to more realistic motion.
                 </p>
@@ -340,7 +337,56 @@
         </div>
 
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abalation Study
+                </h3>
+                <div class="grid-container-4-text">
+                    <div style="text-align: center">Source Motion</div>
+                    <div style="text-align: center">Without Motion Prior</div>
+                    <div style="text-align: center">Without Pose Prior</div>
+                    <div style="text-align: center">Ours</div>
+                </div>
+                <div class="grid-container-4">
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/Dog_7.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/hamster_7_p2p.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/hamster_7_noGAN.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/hamster_7.webm"></video>
+                <!-- </div>
+                <div class="grid-container-4"> -->
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/Dog_7.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/trex_7_p2ps.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/trex_7_noGAN.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/ablation/trex_7.webm"></video>
+                </div>
+                <p class="text-justify">
+                    Without considering motion prior knowledge may result in motion with excessive jitter and artifacts, such as foot sliding. Conversely, ignoring pose information, motion may appear smooth but poses can lack realism. Our approach aims to strike a balance, generating motion that is both smooth and characterized by realistic poses.
+                </p>
+            </div>
+        </div>
+  
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Additional Animation (through retargeting)
+                </h3>
+                <!-- <div class="grid-container-3-text">
+                    <div style="text-align: center">Hamster</div>
+                    <div style="text-align: center">Trex</div>
+                    <div style="text-align: center">Horse</div>
+                </div> -->
+                <div class="grid-container-5">
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/sampled_animation/trex_9_ours.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/sampled_animation/hamster_46.webm"></video> 
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/sampled_animation/hamster_7.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/sampled_animation/horse_7.webm"></video>
+                    <video class="video" id="looping" loop playsinline autoPlay muted src="./pose2motion/videos/sampled_animation/horse_20_correct.webm"></video>
+                </div>
+            </div>
+        </div>
+        
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -420,7 +466,7 @@
                                             </div>
                                             <div class="CodeMirror-code" style="">
                                                 <pre
-                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">@inproceedings{qzhao2022graphpde,</span></pre>
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">@inproceedings{qzhao2024P2M,</span></pre>
                                                 <pre
                                                     class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  title={Pose-to-Motion: Cross-Domain Motion Retargeting with Pose Prior},</span></pre>
                                                 <pre
